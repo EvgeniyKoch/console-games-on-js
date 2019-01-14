@@ -1,10 +1,10 @@
 {
-  "name": "mybraingames",
+  "name": "evggames",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
   "bin": {
-    "myBrainGames": "dist/bin/brain-games.js"
+    "brain-games": "dist/bin/brain-games.js"
   },
   "files": ["dist"],
   "scripts": {
