@@ -1,0 +1,23 @@
+{
+  "name": "mybraingames",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "bin": {
+    "myBrainGames": "dist/bin/brain-games.js"
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublishOnly": "npm run build"
+  },  
+  "author": "evgkoch",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "eslint": "^5.12.0"
+  }
+}
