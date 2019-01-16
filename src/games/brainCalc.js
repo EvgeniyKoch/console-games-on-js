@@ -1,4 +1,6 @@
-import { intro, nameRequest, randomNumber, question, questionAnswer, brainGame } from './gameEngine';
+import {
+  intro, nameRequest, randomNumber, questionAnswer, brainGame,
+} from './gameEngine';
 
 const attempts = 3;
 

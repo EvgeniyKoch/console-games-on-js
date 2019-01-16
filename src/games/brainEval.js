@@ -1,4 +1,6 @@
-import { intro, nameRequest, randomNumber, question, brainGame } from './gameEngine';
+import {
+  intro, nameRequest, randomNumber, isEven, question, brainGame,
+} from './gameEngine';
 
 const attempts = 3;
 intro('Answer "yes" if number even otherwise answer "no"');
@@ -11,7 +13,7 @@ const brainEvenPlay = (attempt) => {
   }
   const questionNumber = randomNumber();
   const answer = question(questionNumber);
-  const answerCorrect = questionNumber % 2 === 0 ? 'yes' : 'no';
+  const answerCorrect = isEven(questionNumber) ? 'yes' : 'no';
   brainGame(name, answer, answerCorrect);
   brainEvenPlay(attempt - 1);
 };

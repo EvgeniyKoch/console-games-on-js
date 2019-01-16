@@ -16,6 +16,7 @@ export const question = val => readlineSync.question(`Question: ${val} `);
 export const questionAnswer = () => readlineSync.question('Your answer: ');
 export const tryAgain = name => console.log(`Let's try again, ${name}!`);
 export const correctMessege = () => console.log('Correct!!');
+export const isEven = num => num % 2 === 0;
 
 export const brainGame = (name, answer, answerCorrect) => {
   if (answerCorrect !== answer) {
