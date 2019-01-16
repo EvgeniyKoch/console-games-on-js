@@ -7,4 +7,10 @@
 **Instructions:**
 
 1.Brain-Even:
+
 [![asciicast](https://asciinema.org/a/cJHimy1yBsLLpDByv2ZC1KkKz.svg)](https://asciinema.org/a/cJHimy1yBsLLpDByv2ZC1KkKz)
+
+
+2.Brain-Calc:
+
+[![asciicast](https://asciinema.org/a/rv1jxc691vmdDkylIVhV3nKVw.svg)](https://asciinema.org/a/rv1jxc691vmdDkylIVhV3nKVw)
