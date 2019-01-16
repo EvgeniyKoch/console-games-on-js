@@ -1,23 +1,8 @@
-import {
-  intro, attempts, nameRequest, randomNumber, isEven, question, brainGame,
-} from './gameEngine';
+import brainGame from '..';
 
-intro('Answer "yes" if number even otherwise answer "no"');
-const name = nameRequest();
-
-const brainEvenPlay = (attempt) => {
-  if (attempt === 0) {
-    console.log(`Congratulations, ${name} !!`);
-    return;
-  }
-  const questionNumber = randomNumber();
-  const answer = question(questionNumber);
-  const answerCorrect = isEven(questionNumber) ? 'yes' : 'no';
-  brainGame(name, answer, answerCorrect);
-  brainEvenPlay(attempt - 1);
-};
-
-brainEvenPlay(attempts);
-
+const description = 'Answer "yes" if number even otherwise answer "no"';
+const randomValue = () => Math.floor(Math.random() * 100);
+const funcCorrectAnswer = value => (value % 2 === 0 ? 'yes' : 'no');
+const brainEvenPlay = () => brainGame(description, funcCorrectAnswer, randomValue);
 
 export default brainEvenPlay;

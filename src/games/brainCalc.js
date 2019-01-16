@@ -1,38 +1,31 @@
-import {
-  intro, attempts, nameRequest, randomNumber, questionAnswer, brainGame,
-} from './gameEngine';
+import brainGame from '..';
 
-intro('What is the result of the expression?');
-const name = nameRequest();
+const description = 'What is the result of the expression?';
 
-const brainCalcPlay = (attempt) => {
-  if (attempt === 0) {
-    console.log(`Congratulations, ${name} !!`);
-    return;
-  }
+let operandOne = 0;
+let operandTwo = 0;
+let plus;
+let minus;
+let multiply;
 
-  const operandOne = randomNumber();
-  const operandTwo = randomNumber();
-  const plus = `${operandOne} + ${operandTwo}`;
-  const minus = `${operandOne} - ${operandTwo}`;
-  const multiply = `${operandOne} * ${operandTwo}`;
+const randomValue = () => {
+  operandOne = Math.floor(Math.random() * 100);
+  operandTwo = Math.floor(Math.random() * 100);
+  plus = `${operandOne} + ${operandTwo}`;
+  minus = `${operandOne} - ${operandTwo}`;
+  multiply = `${operandOne} * ${operandTwo}`;
   const operations = [plus, multiply, minus];
 
   const generateOperator = (min, max, operationsArr) => {
     const randomIndex = Math.floor(Math.random() * (max - min + 1)) + min;
     return operationsArr[randomIndex];
   };
-  const getRandomOperations = generateOperator(0, operations.length - 1, operations);
+  return generateOperator(0, operations.length - 1, operations);
+};
 
-  const questionOperation = () => {
-    console.log(`Question: ${getRandomOperations}`);
-    return questionAnswer();
-  };
-
-  const answer = questionOperation();
+const funcCorrectAnswer = (value) => {
   let answerCorrect = 0;
-
-  switch (getRandomOperations) {
+  switch (value) {
     case plus:
       answerCorrect = operandOne + operandTwo;
       break;
@@ -44,12 +37,9 @@ const brainCalcPlay = (attempt) => {
       break;
     default:
   }
-
-  brainGame(name, answer, answerCorrect);
-
-  brainCalcPlay(attempt - 1);
+  return answerCorrect;
 };
 
-brainCalcPlay(attempts);
+const brainCalcPlay = () => brainGame(description, funcCorrectAnswer, randomValue);
 
 export default brainCalcPlay;
