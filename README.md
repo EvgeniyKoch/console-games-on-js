@@ -3,3 +3,8 @@
 <a href="https://codeclimate.com/github/EvgeniyKoch/project-lvl1-s412/maintainability"><img src="https://api.codeclimate.com/v1/badges/4e582a0d6673bdc2871c/maintainability" /></a>
 
 [![Build Status](https://travis-ci.com/EvgeniyKoch/project-lvl1-s412.svg?branch=master)](https://travis-ci.com/EvgeniyKoch/project-lvl1-s412)
+
+**Instructions:**
+
+1.Brain-Even:
+[![asciicast](https://asciinema.org/a/cJHimy1yBsLLpDByv2ZC1KkKz.svg)](https://asciinema.org/a/cJHimy1yBsLLpDByv2ZC1KkKz)
