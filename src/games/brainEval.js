@@ -1,8 +1,7 @@
 import {
-  intro, nameRequest, randomNumber, isEven, question, brainGame,
+  intro, attempts, nameRequest, randomNumber, isEven, question, brainGame,
 } from './gameEngine';
 
-const attempts = 3;
 intro('Answer "yes" if number even otherwise answer "no"');
 const name = nameRequest();
 

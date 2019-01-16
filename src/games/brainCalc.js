@@ -1,8 +1,6 @@
 import {
-  intro, nameRequest, randomNumber, questionAnswer, brainGame,
+  intro, attempts, nameRequest, randomNumber, questionAnswer, brainGame,
 } from './gameEngine';
-
-const attempts = 3;
 
 intro('What is the result of the expression?');
 const name = nameRequest();

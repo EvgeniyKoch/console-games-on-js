@@ -15,6 +15,7 @@ export const randomNumber = () => Math.floor(Math.random() * 100);
 export const question = val => readlineSync.question(`Question: ${val} `);
 export const questionAnswer = () => readlineSync.question('Your answer: ');
 export const isEven = num => num % 2 === 0;
+export const attempts = 3;
 
 export const brainGame = (name, answer, answerCorrect) => {
   if (answerCorrect !== answer) {
