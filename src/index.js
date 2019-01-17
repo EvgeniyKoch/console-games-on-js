@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 
 const attempts = 3;
 
-const brainGame = (descript, funcCorrectAnswer, question) => {
+const brainGame = (descript, data) => {
   console.log('Welcome to the Brain Games!');
   console.log(descript);
 
@@ -14,10 +14,11 @@ const brainGame = (descript, funcCorrectAnswer, question) => {
       console.log(`Congratulations, ${name} !!`);
       return;
     }
-    const questionGame = question();
+    const dataItems = data();
+    const questionGame = dataItems[0];
     console.log(`Question: ${questionGame} `);
 
-    const answerCorrect = funcCorrectAnswer(questionGame);
+    const answerCorrect = dataItems[1];
     const answer = readlineSync.question('Your answer: ');
 
     if (String(answerCorrect) !== answer) {
