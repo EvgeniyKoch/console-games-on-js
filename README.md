@@ -4,7 +4,7 @@
 
 [![Build Status](https://travis-ci.com/EvgeniyKoch/project-lvl1-s412.svg?branch=master)](https://travis-ci.com/EvgeniyKoch/project-lvl1-s412)
 
-**Instructions:**
+**Video instructions:**
 
 1.Brain-Even:
 
