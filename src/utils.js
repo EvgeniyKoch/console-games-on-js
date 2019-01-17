@@ -1,3 +1,3 @@
-const generateNum = () => Math.floor(Math.random() * 100);
+const generateNum = (min, max) => Math.floor(min + Math.random() * (max + 1 - min));
 
 export default generateNum;
