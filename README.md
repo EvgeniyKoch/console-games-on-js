@@ -22,3 +22,7 @@
 4.Brain-Progression:
 
 [![asciicast](https://asciinema.org/a/85qqGc3reUGxImeTThfo1Qqyn.svg)](https://asciinema.org/a/85qqGc3reUGxImeTThfo1Qqyn)
+
+5.Brain-Prime:
+
+[![asciicast](https://asciinema.org/a/bcivTDDVifFAXADPESeliYBWp.svg)](https://asciinema.org/a/bcivTDDVifFAXADPESeliYBWp)
