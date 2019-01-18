@@ -7,32 +7,30 @@ const generateOperator = (min, max, operationsItems) => {
 };
 
 const description = 'What is the result of the expression?';
+const operations = ['+', '-', '*'];
 
-const getDataGame = () => {
-  const operations = ['+', '-', '*'];
+const getGameData = () => {
   const operandOne = generateNum(0, 100);
   const operandTwo = generateNum(0, 100);
   const operator = generateOperator(0, operations.length - 1, operations);
 
-  let answerCorrect = 0;
-  let task = '';
+  let correctAnswer;
+  let task;
 
   switch (operator) {
     case '+':
       task = `${operandOne} + ${operandTwo}`;
-      answerCorrect = operandOne + operandTwo;
+      correctAnswer = operandOne + operandTwo;
       break;
     case '-':
-      answerCorrect = operandOne - operandTwo;
+      correctAnswer = operandOne - operandTwo;
       task = `${operandOne} - ${operandTwo}`;
       break;
-    case '*':
-      answerCorrect = operandOne * operandTwo;
-      task = `${operandOne} * ${operandTwo}`;
-      break;
     default:
+      correctAnswer = operandOne * operandTwo;
+      task = `${operandOne} * ${operandTwo}`;
   }
-  return [task, answerCorrect];
+  return [task, correctAnswer];
 };
 
-export default () => brainGame(description, getDataGame);
+export default () => brainGame(description, getGameData);
