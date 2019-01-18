@@ -9,7 +9,7 @@ const getGameData = () => {
   const operandOne = generateNum(0, 100);
   const operandTwo = generateNum(0, 100);
   const question = `${operandOne} ${operandTwo}`;
-  const answerCorrect = getGreatestDivisor(operandOne, operandTwo);
+  const answerCorrect = `${getGreatestDivisor(operandOne, operandTwo)}`;
 
   return [question, answerCorrect];
 };

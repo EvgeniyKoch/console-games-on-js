@@ -7,7 +7,7 @@ const isPrime = (num) => {
   if (num < 2) {
     return false;
   }
-  for (let i = 2; i < num / 2; i += 1) {
+  for (let i = 2; i <= num / 2; i += 1) {
     if (num % i === 0) {
       return false;
     }
@@ -16,7 +16,7 @@ const isPrime = (num) => {
 };
 
 const getGameData = () => {
-  const question = generateNum(0, 500);
+  const question = generateNum(2, 5);
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
 
   return [question, correctAnswer];

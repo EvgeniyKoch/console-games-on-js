@@ -15,14 +15,14 @@ const brainGame = (descript, data) => {
       return;
     }
     const dataItems = data();
-    const questionGame = dataItems[0];
-    console.log(`Question: ${questionGame} `);
+    const [gameQuestion] = dataItems;
+    console.log(`Question: ${gameQuestion} `);
 
-    const answerCorrect = dataItems[1];
+    const [, correctAnswer] = dataItems;
     const answer = readlineSync.question('Your answer: ');
 
-    if (String(answerCorrect) !== answer) {
-      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${answerCorrect}".`);
+    if (correctAnswer !== answer) {
+      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`);
       console.log(`Let's try again, ${name}!`);
       return;
     }

@@ -14,20 +14,20 @@ const getGameData = () => {
   const operandTwo = generateNum(0, 100);
   const operator = generateOperator(0, operations.length - 1, operations);
 
-  let correctAnswer;
+  let correctAnswer = '';
   let task;
 
   switch (operator) {
     case '+':
       task = `${operandOne} + ${operandTwo}`;
-      correctAnswer = operandOne + operandTwo;
+      correctAnswer += operandOne + operandTwo;
       break;
     case '-':
-      correctAnswer = operandOne - operandTwo;
+      correctAnswer += operandOne - operandTwo;
       task = `${operandOne} - ${operandTwo}`;
       break;
     default:
-      correctAnswer = operandOne * operandTwo;
+      correctAnswer += operandOne * operandTwo;
       task = `${operandOne} * ${operandTwo}`;
   }
   return [task, correctAnswer];

@@ -2,23 +2,23 @@ import brainGame from '..';
 import generateNum from '../utils';
 
 const description = 'What number is missing in the progression?';
-const firstItemSequence = generateNum(0, 25);
-const stepSequence = generateNum(1, 5);
+const progressionLength = 10;
 
-const generateRandomSequence = (firstItem, step) => {
+const generateRandomSequence = (sequenceItem, step) => {
   const randomSequence = [];
-  const progressionLength = 10;
-  let nextItem = firstItem + step;
+  let nextSequenceItem = sequenceItem + step;
 
-  for (let i = 0; i <= progressionLength; i += 1) {
-    nextItem += step;
-    randomSequence.push(nextItem);
+  for (let i = 0; i < progressionLength; i += 1) {
+    nextSequenceItem += step;
+    randomSequence.push(nextSequenceItem);
   }
   return randomSequence;
 };
 
 const getGameData = () => {
-  const progression = generateRandomSequence(firstItemSequence, stepSequence);
+  const itemSequence = generateNum(0, 25);
+  const stepSequence = generateNum(1, 5);
+  const progression = generateRandomSequence(itemSequence, stepSequence);
   const hiddenElementIndex = generateNum(0, 10);
   const correctAnswer = progression.splice(hiddenElementIndex, 1, '..');
   const question = progression.join(' ');
