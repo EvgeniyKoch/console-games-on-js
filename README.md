@@ -4,6 +4,17 @@
 
 [![Build Status](https://travis-ci.com/EvgeniyKoch/project-lvl1-s412.svg?branch=master)](https://travis-ci.com/EvgeniyKoch/project-lvl1-s412)
 
+**instructions:**
+The game package must be installed once by a command in the terminal:
+    sudo nmp install -g evggames
+and trigger any of the games:
+      brain-even
+      brain-calc
+      brain-gcd
+      brain prime
+      brain progression
+      
+      
 **Video instructions:**
 
 1.Brain-Even:
