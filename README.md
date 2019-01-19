@@ -4,7 +4,7 @@
 
 [![Build Status](https://travis-ci.com/EvgeniyKoch/project-lvl1-s412.svg?branch=master)](https://travis-ci.com/EvgeniyKoch/project-lvl1-s412)
 
-**instructions:**
+**Instructions:**
 The game package must be installed once by a command in the terminal:  
 
       sudo nmp install -g evggames   
