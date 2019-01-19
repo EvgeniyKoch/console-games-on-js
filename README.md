@@ -6,13 +6,13 @@
 
 **instructions:**
 The game package must be installed once by a command in the terminal:  
-    sudo nmp install -g evggames   
-and trigger any of the games:  
-      brain-even   
-      brain-calc    
-      brain-gcd   
-      brain prime   
-      brain progression   
+      sudo nmp install -g evggames   
+And trigger any of the games:  
+        brain-even   
+        brain-calc    
+        brain-gcd   
+        brain prime   
+        brain progression   
       
       
 **Video instructions:**
