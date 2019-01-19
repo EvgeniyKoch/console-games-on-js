@@ -3,7 +3,8 @@ import generateNum from '../utils';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
-const getGreatestDivisor = (num1, num2) => (!num2 ? num1 : getGreatestDivisor(num2, num1 % num2));
+const getGreatestDivisor = (num1, num2) => (
+  num2 === 0 ? num1 : getGreatestDivisor(num2, num1 % num2));
 
 const getGameData = () => {
   const operandOne = generateNum(0, 100);

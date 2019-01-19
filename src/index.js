@@ -15,10 +15,8 @@ const brainGame = (descript, data) => {
       return;
     }
     const dataItems = data();
-    const [gameQuestion] = dataItems;
+    const [gameQuestion, correctAnswer] = dataItems;
     console.log(`Question: ${gameQuestion} `);
-
-    const [, correctAnswer] = dataItems;
     const answer = readlineSync.question('Your answer: ');
 
     if (correctAnswer !== answer) {

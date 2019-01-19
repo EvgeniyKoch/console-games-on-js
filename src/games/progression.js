@@ -6,11 +6,11 @@ const progressionLength = 10;
 
 const getGameData = () => {
   const progression = [];
-  const itemSequence = generateNum(1, 9);
+  const first = generateNum(1, 9);
   const step = generateNum(1, 5);
 
   for (let i = 0; i < progressionLength; i += 1) {
-    const nextSequenceItem = itemSequence + step * i;
+    const nextSequenceItem = first + step * i;
     progression.push(nextSequenceItem);
   }
 
@@ -21,6 +21,5 @@ const getGameData = () => {
 
   return [question, correctAnswer];
 };
-
 
 export default () => brainGame(description, getGameData);
